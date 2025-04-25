@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Employee Details Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      /* background-color: #f2f2f2; */
+      padding: 20px;
+    }
+
+    form {
+      /* background-color: #fff; */
+      padding: 25px;
+      /* border-radius: 10px; */
+      /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
+      /* max-width: 900px; */
+      /* margin: auto; */
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 20px;
+    }
+
+    legend {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .form-row > label {
+      flex: 1;
+    }
+
+    .radio-group {
+      margin-bottom: 10px;
+    }
+
+    .radio-group input {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .note {
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <h1>New Employee Details Form</h1>
+
+    <fieldset>
+      <legend>Personal Details</legend>
+      <div class="form-row">
+        <label>Title
+          <select required>
+            <option value="">Select</option>
+            <option>Mr</option>
+            <option>Ms</option>
+            <option>Mrs</option>
+          </select>
+        </label>
+        <label>First Name <input type="text" required></label>
+        <label>Middle Name <input type="text" required></label>
+        <label>Surname <input type="text" required></label>
+      </div>
+      <div class="radio-group">
+        <label>Gender:
+          <input type="radio" name="gender" required> Male
+          <input type="radio" name="gender"> Female
+        </label>
+      </div>
+      <label>Birth Date <input type="date" required></label>
+      <label>Street Address <input type="text" required></label>
+      <label>Street Address Line 2 <input type="text"></label>
+      <div class="form-row">
+        <label>Suburb <input type="text" required></label>
+        <label>State <input type="text" required></label>
+        <label>Postcode <input type="text" required></label>
+      </div>
+      <label>Home Phone <input type="text" required></label>
+      <label>Mobile Phone <input type="text" required></label>
+      <label>Email Address <input type="email" required></label>
+      <div class="radio-group">
+        <label>Are you an Australian?
+          <input type="radio" name="australian" required> Yes
+          <input type="radio" name="australian"> No
+        </label>
+      </div>
+      <div class="radio-group">
+        <label>Do you have a working visa?
+          <input type="radio" name="visa" required> Yes
+          <input type="radio" name="visa"> No
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Employment Details</legend>
+      <label>Job Title <input type="text" required></label>
+      <label>Commencement Date <input type="date" required></label>
+      <label>File Tax Number <input type="text" required></label>
+      <div class="radio-group">
+        <label>Employment Status:
+          <input type="radio" name="employment" required> Full Time
+          <input type="radio" name="employment"> Part Time
+          <input type="radio" name="employment"> Temporary
+          <input type="radio" name="employment"> Casual
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Emergency Contact Details</legend>
+      <div class="form-row">
+        <label>Title
+          <select required>
+            <option value="">Select</option>
+            <option>Mr</option>
+            <option>Ms</option>
+            <option>Mrs</option>
+          </select>
+        </label>
+        <label>First Name <input type="text" required></label>
+        <label>Middle Name <input type="text" required></label>
+        <label>Surname <input type="text" required></label>
+      </div>
+      <label>Relationship <input type="text" required></label>
+      <label>Home Phone <input type="text" required></label>
+      <label>Mobile Phone <input type="text" required></label>
+      <label>Email Address <input type="email" required></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Banking Details</legend>
+      <div class="form-row">
+        <label>Bank Name <input type="text" required></label>
+        <label>Bank Branch <input type="text" required></label>
+      </div>
+      <label>Account Name <input type="text" required></label>
+      <div class="form-row">
+        <label>Account Number <input type="text" required></label>
+        <label>BSB Number <input type="text" required></label>
+      </div>
+      <label>Employee Signature <input type="text" required></label>
+      <label>Print your name here <input type="text" required></label>
+      <label>Enter date here <input type="date" required></label>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <p class="note">* Mandatory fields</p>
+  </form>
+</body>
+</html>
