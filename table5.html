@@ -21,7 +21,7 @@
 
     h1 {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 50px;
     }
 
     fieldset {
@@ -39,7 +39,7 @@
       margin-bottom: 10px;
     }
 
-    input, select {
+    input, select, textarea {
       width: 100%;
       padding: 8px;
       margin-top: 4px;
@@ -68,9 +68,9 @@
 
     button {
       padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
+      background-color: lightgray;
+      color: black;
+      border: 1px solid black;
       border-radius: 5px;
       cursor: pointer;
     }
@@ -92,35 +92,45 @@
     <fieldset>
       <legend>Personal Details</legend>
       <div class="form-row">
-        <label>Title
-          <select required>
+        <p style="width: 300px;">Your Name</p>
+        <label class="form-row" style="flex-direction: column;gap: 0;">
+          <select required style="background-color: rgb(88, 88, 227);color: white;width: 200px;">
             <option value="">Select</option>
             <option>Mr</option>
             <option>Ms</option>
             <option>Mrs</option>
           </select>
+          Title
         </label>
-        <label>First Name <input type="text" required></label>
-        <label>Middle Name <input type="text" required></label>
-        <label>Surname <input type="text" required></label>
+        <label><input type="text" required>First Name</label>
+        <label><input type="text" required>Middle Name</label>
+        <label><input type="text" required>Surname</label>
       </div>
-      <div class="radio-group">
-        <label>Gender:
+      <div class="radio-group form-row" style="align-items: center;">
+        <p style="width: 300px;">Gender</p>
+        <label>
           <input type="radio" name="gender" required> Male
           <input type="radio" name="gender"> Female
         </label>
       </div>
-      <label>Birth Date <input type="date" required></label>
-      <label>Street Address <input type="text" required></label>
-      <label>Street Address Line 2 <input type="text"></label>
+      <label class="form-row"><p style="width: 300px;">Birth Date</p><input type="date" style="width: 300px;" required></label>
       <div class="form-row">
-        <label>Suburb <input type="text" required></label>
-        <label>State <input type="text" required></label>
-        <label>Postcode <input type="text" required></label>
+        <p style="width: 300px;">Address</p>
+        <label><input type="text" required>Street Address </label>
+        <label><input type="text">Street Address Line 2 </label>
       </div>
-      <label>Home Phone <input type="text" required></label>
-      <label>Mobile Phone <input type="text" required></label>
-      <label>Email Address <input type="email" required></label>
+      <div class="form-row">
+        <div style="width: 300px;"></div>
+        <label><input type="text" required>Suburb</label>
+        <label><input type="text" required>State</label>
+        <label><input type="text" required>Postcode</label>
+      </div>
+      <div class="form-row">
+        <p style="width: 300px;">Contact</p>
+        <label>Home Phone <input type="text" required></label>
+        <label>Mobile Phone <input type="text" required></label>
+        <label>Email Address <input type="email" required></label>
+      </div>
       <div class="radio-group">
         <label>Are you an Australian?
           <input type="radio" name="australian" required> Yes
@@ -137,11 +147,12 @@
 
     <fieldset>
       <legend>Employment Details</legend>
-      <label>Job Title <input type="text" required></label>
-      <label>Commencement Date <input type="date" required></label>
-      <label>File Tax Number <input type="text" required></label>
-      <div class="radio-group">
-        <label>Employment Status:
+      <label class="form-row"><p style="width: 300px;">Job Title</p> <input type="text" required></label>
+      <label class="form-row"><p style="width: 300px;">Commencement Date</p> <input type="date" required></label>
+      <label class="form-row"><p style="width: 300px;">File Tax Number</p> <input type="text" required></label>
+      <div class="radio-group form-row" style="align-items: center;">
+        <p style="width: 300px;">Employment Status</p>
+        <label>
           <input type="radio" name="employment" required> Full Time
           <input type="radio" name="employment"> Part Time
           <input type="radio" name="employment"> Temporary
@@ -153,38 +164,50 @@
     <fieldset>
       <legend>Emergency Contact Details</legend>
       <div class="form-row">
-        <label>Title
+        <p style="width: 300px;">Name</p>
+        <label>
           <select required>
             <option value="">Select</option>
             <option>Mr</option>
             <option>Ms</option>
             <option>Mrs</option>
           </select>
+          Title
         </label>
-        <label>First Name <input type="text" required></label>
-        <label>Middle Name <input type="text" required></label>
-        <label>Surname <input type="text" required></label>
+        <label><input type="text" required>First Name</label>
+        <label><input type="text" required>Middle Name</label>
+        <label><input type="text" required>Surname</label>
       </div>
-      <label>Relationship <input type="text" required></label>
-      <label>Home Phone <input type="text" required></label>
-      <label>Mobile Phone <input type="text" required></label>
-      <label>Email Address <input type="email" required></label>
+      <label class="form-row"><p style="width: 300px;">Relationship</p> <input type="text" style="width: 300px;" required></label>
+      <div class="form-row">
+        <p style="width: 300px;">Contact</p>
+        <label>Home Phone <input type="text" required></label>
+        <label>Mobile Phone <input type="text" required></label>
+        <label>Email Address <input type="email" required></label>
+      </div>
     </fieldset>
 
     <fieldset>
       <legend>Banking Details</legend>
       <div class="form-row">
+        <p style="width: 300px;">Bank</p>
         <label>Bank Name <input type="text" required></label>
         <label>Bank Branch <input type="text" required></label>
       </div>
-      <label>Account Name <input type="text" required></label>
       <div class="form-row">
+        <p style="width: 300px;">Account</p>
+        <label>Account Name <input type="text" required></label>
         <label>Account Number <input type="text" required></label>
         <label>BSB Number <input type="text" required></label>
       </div>
-      <label>Employee Signature <input type="text" required></label>
-      <label>Print your name here <input type="text" required></label>
-      <label>Enter date here <input type="date" required></label>
+      <div class="form-row">
+        <p style="width: 300px;">Employee Signature</p>
+        <div style="display: flex;flex-direction: column; gap: 0px;width: 71%;">
+          <textarea style="min-height: 100px;" required></textarea>
+          <input type="text" placeholder="Print your name here" required>
+          <input type="text" placeholder="Enter date here" required>
+        </div>
+      </div>
     </fieldset>
 
     <button type="submit">Submit</button>
